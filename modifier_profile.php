@@ -66,7 +66,7 @@
               <button class="btn">Upload a file</button>
               <input type="file" name="fichier" />
         </div>  
-        <input id="b1" type="submit" name="Enregiter" value="Enregiter">
+        <input id="b1" type="submit" name="modifier" value="Enregiter">
        
         </div>
         
