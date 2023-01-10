@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
     <title>ENSAK - Emploi du Temps</title>
 </head>
 <body>
     <form action="#" method="POST">
-        <h2>Connexion</h2>
+        <h2>Connexion</h2><br>
         <label for="email">Login:</label> <br>
         <input class="info_input" type="email" name="email" required> <br>
         <label for="password">Password:</label> <br>
@@ -26,7 +28,7 @@
             $resultat=mysqli_query($link,$req);
             if($data=mysqli_fetch_assoc($resultat)) {
                 session_start();
-                $_SESSION['id_utilisateur']=$data['id_usilisateur'];
+                $_SESSION['id_utilisateur']=$data['id_utilisateur'];
                 header('location:traitement.php');
             } else {
                 echo "Email ou mot de passe est incorrecte";
