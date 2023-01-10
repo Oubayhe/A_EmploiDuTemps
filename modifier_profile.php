@@ -86,7 +86,7 @@
 
 
     <?php
-    if(isset($_POST['Enregiter'])) {
+    if(isset($_POST['modifier'])) {
         $nom=$_POST['nom'];
         $prenom=$_POST['prenom'];
         $email=$_POST['email'];
