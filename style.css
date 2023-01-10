@@ -1,3 +1,199 @@
-.titre-emploi-temps {
-    text-align: center;
+
+
+
+
+@font-face{
+	font-family: font1;
+	src:url(font/OpenSans/OpenSans-Light.ttf)  ; 
 }
+@font-face{
+	font-family: font2;
+	src:url(font/OpenSans/OpenSans-bold.ttf)  ; 
+}
+
+
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: font2;
+	background-color: #fbfbfb;
+}
+
+#profil{
+	width: 300px;
+	display: inline-block;
+	border-radius: 10px;
+	vertical-align: top;
+	margin-bottom: 0px;
+}
+#container1{
+	position: relative;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 4rem; 
+	padding-left: 3rem; 
+	padding-bottom:  4rem; 
+	border-radius: 10px;
+
+	background-color: #fff;
+
+
+
+
+}
+#container2{
+	display: inline-block;
+	width: 50%;
+	padding-left: 3rem;
+
+}
+p{
+	font-weight: normal;
+	margin: 0;
+
+	color: #707c80;	
+}
+button{
+	padding: 17px 27px;
+	margin-top: 63px;
+	background-color: transparent;
+	border-radius: 10px;
+	text-transform: uppercase;
+	border-color: #6100ff;
+	letter-spacing: 2px;
+	color: #6100ff;
+	font-family:  font2;
+
+}
+
+#b1{
+	padding: 17px 45px;
+	margin-top: 0px;
+	background-color: transparent;
+	border-radius: 10px;
+	text-transform: uppercase;
+	border-color: #6100ff;
+	letter-spacing: 2px;
+	color: #6100ff;
+	font-family:  font2;
+
+
+	margin-left: 3rem;
+	
+}
+
+#pencil{
+	width: 20px;
+	vertical-align: middle;
+	margin-right: 10px; 
+}
+#camera{
+	position: absolute;
+	width: 30px;
+	left: 5rem;
+	top: 5.2rem;
+	opacity: .8;	
+
+}
+
+.c{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 20px;
+
+}
+#left{
+  width:17px;
+  height:9px;
+  border-radius:5px;
+  background-color:#6100ff;
+
+}
+h2,#left{
+  display:inline-block;
+  margin-top:0;
+}
+h2{
+  vertical-align:top;
+  margin-left:20px;
+  margin-right:10px;
+  font-family:font1;
+	padding: 0;
+}
+
+
+
+/*-----------upload css-------------*/
+.upload-btn-wrapper {
+
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  
+
+}
+
+.btn {
+  margin-top:20px;
+  text-align: center;
+  border: 2px dashed gray;
+  color: gray;
+  background-color: white;
+  padding: 30px 60px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  opacity: 0;
+  
+
+}
+.center{
+	
+	text-align: center;
+}
+/*-----------fin upload css-------------*/
+#c2{
+
+	margin-top: 0;
+}
+/*-----------------Form----------------------*/
+#formulaire input{
+	width: 50%;
+	padding: 13px;
+	color: #7a7a7a;
+	font-size: 15px;
+	background-color:  rgba(0, 0, 0, 0.03);
+	border: none; 
+	margin-bottom: 25px;
+}
+#formulaire textarea{
+	width: 50%;
+	padding: 13px;
+
+	color: #7a7a7a;
+	font-size: 15px;
+	background-color:  rgba(0, 0, 0, 0.03);
+	border: none; 
+	height: 1.1rem;
+	margin-bottom: 25px;
+
+
+
+}
+label[for=email],label[for=password],label[for=prenom],label[for=nom]{
+	display: inline-block;	
+	width: 30%;
+}
+
+/*-----------------FinForm----------------------*/
+
