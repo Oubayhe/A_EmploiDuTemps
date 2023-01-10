@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
     <title>Modification</title>
 </head>
 <body>
     <?php
     include("connexion.php");
     session_start();
+
     $id_user=$_SESSION['id_utilisateur'];
     $req="SELECT * FROM utilisateur WHERE id_utilisateur=".$id_user."";
     $resultat=mysqli_query($link,$req);
+
     $data=mysqli_fetch_assoc($resultat);
     $email=$data['email'];
     $password=$data['password'];
@@ -20,22 +24,69 @@
     $prenom=$data['prenom'];
     $photo=$data['photo'];
     $type=$data['type'];
+
+
     ?>
-    <form action="#" method="post" enctype="multipart/form-data">
-    <label>Photo</label> <br>
-        <input class="info_input" type="file" name="fichier"> <br>
+
+
+    <div class="c">
+      <div id="left"></div>
+            <h2>Modifier Profile</h2>
+      </div>
+ </div>
+
+<div id="container1">
+
+    <img id="profil" src="photo/<?php echo "$photo";?>">
+    <img id="camera" src="photo/camera.png" ></img>
+
+    <div id="container2">
+
+        <form id="formulaire" action="#" method="post" enctype="multipart/form-data">
+
         <label for="nom">Nom : </label>
         <input type="text" name="nom" value="<?php echo"$nom"; ?>"><br>
-        <label for="prenom">Préom : </label>
+
+
+        <label for="prenom">Prénom : </label>
         <input type="text" name="prenom" value="<?php echo"$prenom"; ?>"><br>
+
+
         <label for="email">Email : </label>
         <input type="email" name="email" value="<?php echo"$email"; ?>"><br>
+      
+
         <label for="password">Mot de passe : </label>
         <input type="text" name="password" value="<?php echo"$password"; ?>"><br>
-        <input type="submit" name="modifier" value="modifier">
+        
+    </div>
+        
+        <div id="c2">
+        <div class="upload-btn-wrapper">
+              <button class="btn">Upload a file</button>
+              <input type="file" name="fichier" />
+        </div>  
+        <input id="b1" type="submit" name="modifier" value="Enregiter">
+       
+        </div>
+        
+        </form>
+        
+</div>
+
+
+
     </form>
+   
+
+
+
+
+
+
+
     <?php
-    if(isset($_POST['modifier'])) {
+    if(isset($_POST['Enregiter'])) {
         $nom=$_POST['nom'];
         $prenom=$_POST['prenom'];
         $email=$_POST['email'];
